@@ -1,0 +1,29 @@
+# Logs
+react-gofly/logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+react-gofly/node_modules
+react-gofly/dist
+react-gofly/dist-ssr
+react-gofly/*.local
+
+# Editor directories and files
+gogofly/.vscode/*
+react-gofly/.vscode/*
+react-gofly/!.vscode/extensions.json
+gogofly/!.vscode/extensions.json
+
+gogofly/conf/*.yml
+
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

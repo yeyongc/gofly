@@ -1,0 +1,80 @@
+{
+    "type": "dir",
+    "name": "",
+    "children": [
+        {
+            "name": "api",  
+            "type": 
+            "dir", 
+            "children": []
+        },
+        {
+            "name": "cmd",  
+            "type": "dir", 
+            "children": []
+        },
+        {
+            "name": "conf",  
+            "type": "dir", 
+            "children": []
+        },
+        {
+            "name": "dao",  
+            "type": "dir", 
+            "children": []
+        },
+        {
+            "name": "global",  
+            "type": "dir", 
+            "children": [
+                {
+                    "name": "constants", 
+                    "type": "dir", 
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "log",  
+            "type": "dir", 
+            "children": []
+        },
+        {
+            "name": "middleware",  
+            "type": "dir", 
+            "children": []
+        },
+        {
+            "name": "model",  
+            "type": "dir", 
+            "children": []
+        },
+        {
+            "name": "router",  
+            "type": "dir", 
+            "children": []
+        },
+        {
+            "name": "service",  
+            "type": "dir", 
+            "children": [
+                {
+                    "name": "dto", 
+                    "type": "dir", 
+                    "children": []
+                },
+                {
+                    "name": 
+                    "example.go", 
+                    "type":"file", 
+                    "children":[]
+                }
+            ]
+        },
+        {
+            "name": "utils",  
+            "type": "dir", 
+            "children": []
+        }
+    ]
+}
