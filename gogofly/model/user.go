@@ -10,8 +10,8 @@ import (
 // entity：对应数据库sys_user表
 type User struct {
 	ID        uint           `grom:"primarykey" json:"id" uri:"id" xml:"id" form:"id"`
-	CreatedAt time.Time      `json:"created_time"`
-	UpdatedAt time.Time      `json:"updated_at"`
+	CreatedAt time.Time      `json:"created_time" form:"created_at"`
+	UpdatedAt time.Time      `json:"updated_at" form:"updated_at"`
 	DeletedAt gorm.DeletedAt `grom:"index" json:"deleted_at" xml:"deleted_at" from:"deleted_at"`
 	Name      string         `json:"name" gorm:"size:64; not null"`
 	RealName  string         `json:"real_name" gorm:"size:128"`

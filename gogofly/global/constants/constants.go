@@ -27,4 +27,7 @@ const (
 	ERR_CODE_TOKEN_INVALID     = 10201 // 无效token
 	ERR_CODE_TOKEN_RENEW       = 10202 // 重新生成token出错
 	ERR_CODE_TOKEN_NOT_MATCHED = 10203 // token不匹配
+
+	// 参数错误
+	ERR_CODE_ARGUMENT_INVALID = 10303
 )

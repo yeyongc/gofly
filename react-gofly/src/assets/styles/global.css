@@ -1,0 +1,58 @@
+/* 设置全局字体 */
+@font-face {
+    font-family: 'iconfont';  /* Project id 3975810 */
+    src: url('../fonts/iconfont.woff2?t=1679891008019') format('woff2'),
+         url('../fonts/iconfont.woff?t=1679891008019') format('woff'),
+         url('../fonts/iconfont.ttf?t=1679891008019') format('truetype');
+  }
+
+/* 设置全局盒模型的行为 */
+/* begin */
+:root{
+    /* 根元素设置border-box */
+    box-sizing: border-box;
+  
+    /* 设置font-family  */
+    font-family: "iconfont", sans-serif;
+  }
+  
+  *,
+  ::before,
+  ::after{
+    /* 其他所有元素以及伪元素通过继承来调整盒模型行为 */
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  img{
+    border: none;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+  }
+
+  label{
+    display: inline-block;
+  }
+
+  em{
+    font-style: normal;
+  }
+
+  input, 
+  button,
+  select,
+  textarea{
+    outline: none;
+  }
+
+  input,
+  textarea{
+    background: none !important;
+  }
+
+  a {
+    outline: none;
+    color: var(--link-color);
+  }

@@ -1,10 +1,9 @@
 package middleware
 
 import (
-	"gogofly/api"
+	"gogofly/api/goflyhttp"
 	"gogofly/global/constants"
 	"gogofly/service"
-	"net/http"
 	"strings"
 	"time"
 
@@ -24,10 +23,11 @@ const (
 
 // 响应未授权
 func tokenErr(ctx *gin.Context, code int) {
-	api.Fail(ctx, api.ResponseJson{
-		Status: http.StatusUnauthorized,
-		Code:   code,
-		Msg:    "Invalid token",
+	goflyhttp.Fail(ctx, goflyhttp.ResponseData{
+		Code: goflyhttp.ERR_CODE_TOKEN_INVALID,
+		Payload: map[string]interface{}{
+			"error": "无效token",
+		},
 	})
 }
 

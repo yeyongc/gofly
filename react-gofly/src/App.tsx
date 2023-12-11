@@ -1,10 +1,14 @@
-import './App.css'
+import { RouterProvider } from 'react-router-dom'
+
+import "./App.scss"
+// custom router
+import router from "@/router/router"
 
 function App() {
 
   return (
     <>
-      <h2>Hello</h2>
+      <RouterProvider router={router} />
     </>
   )
 }
