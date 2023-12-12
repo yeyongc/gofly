@@ -19,6 +19,7 @@ react-gofly/!.vscode/extensions.json
 gogofly/!.vscode/extensions.json
 
 gogofly/conf/*.yml
+gogofly/log/*
 
 .idea
 .DS_Store
