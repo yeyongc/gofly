@@ -1,6 +1,7 @@
 package action
 
 import (
+	"fmt"
 	"gogofly/api/goflyhttp"
 	"net/http"
 
@@ -28,6 +29,7 @@ func HandleActionAndGenerateResponse(action Action) Response {
 	//解析request
 	err = goflyhttp.ParseRequest(action.Ctx, action.Req)
 	if err != nil {
+		fmt.Println(err.Error())
 		data := ResponseData{
 			Code: goflyhttp.ERR_CODE_ARGUMENT_INVALID,
 			Payload: map[string]interface{}{
@@ -41,7 +43,7 @@ func HandleActionAndGenerateResponse(action Action) Response {
 		return resp
 	}
 
-	// 服务请求
+	// 服务请求, 并生成对应response
 	serviceData, err := action.ServiceFunc()
 
 	if err != nil {

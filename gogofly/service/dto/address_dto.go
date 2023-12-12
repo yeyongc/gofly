@@ -5,13 +5,13 @@ import "gogofly/model"
 type AddressAddDTO struct {
 	Mobile        string `gorm:"size:11" json:"mobile" form:"address"`
 	UserName      string `gorm:"size:64,not null" json:"user_name" form:"user_name"`
-	Country       string `gorm:"size:128,default:中国" json:"country" from:"country"`
+	Country       string `gorm:"size:128" json:"country" from:"country"`
 	Province      string `gorm:"size:128" json:"province" form:"province"`
 	City          string `gorm:"size:128" json:"city" form:"city"`
 	County        string `gorm:"size:128" json:"county" form:"county"`
 	DetailAddress string `gorm:"size:128" json:"detail_address" form:"detail_address"`
 	Mark          string `gorm:"size:10,default null" json:"mark" form:"mark"`
-	UserID        uint   `gorm:"not null" json:"owner_id" uri:"id" form:"owner_id" binding:"required"`
+	UserID        uint   `gorm:"not null" json:"user_id" uri:"id" form:"user_id" binding:"required"`
 }
 
 type AddressUpdateDTO struct {
