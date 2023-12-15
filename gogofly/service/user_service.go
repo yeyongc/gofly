@@ -25,7 +25,8 @@ func (m *UserService) Login(userDto *dto.UserLoginDTO) (model.User, string, erro
 	var errResult error
 	var token string
 	user, err := m.Dao.GetUserByName(userDto.Name)
-	if err != nil || utils.IsValidPassword(user.Password, userDto.Password) {
+	encryptedPwd, _ := utils.Encrypt(userDto.Password)
+	if err != nil || user.Password == encryptedPwd {
 		errResult = errors.New(fmt.Errorf("invalid username or password").Error())
 	} else {
 		// 校验成功，生成token,并将token缓存进redis
@@ -34,6 +35,7 @@ func (m *UserService) Login(userDto *dto.UserLoginDTO) (model.User, string, erro
 			errResult = errors.New(fmt.Errorf("generate token error: %s", err).Error())
 		}
 	}
+	user.Password = ""
 	return user, token, errResult
 }
 func (m *UserService) AddUser(userDTO *dto.UserAddDTO) error {

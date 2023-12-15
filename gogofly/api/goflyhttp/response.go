@@ -58,7 +58,19 @@ const (
 	ERR_CODE_SERVICE_ADDRESS_DELETE = 10404
 )
 
-// token service 相关错误码：103XX
+// todo service 相关错误码：103XX
+const (
+	// 自定义错误响应状态码----todo添加错误
+	ERR_CODE_SERVICE_TODO_ADD = 10301
+
+	// 自定义错误响应状态码----todo删除错误
+	ERR_CODE_SERVICE_TODO_DELETE = 10302
+
+	// 自定义错误响应状态码----获取todo list错误
+	ERR_CODE_SERVICE_TODO_GET_LIST = 10303
+)
+
+// token service 相关错误码：102XX
 const (
 	// 自定义错误响应状态码----无效token
 	ERR_CODE_TOKEN_INVALID = 10201

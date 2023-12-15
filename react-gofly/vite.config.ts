@@ -10,7 +10,11 @@ export default defineConfig({
   plugins: [react()],
   resolve:{
     alias: {
-      "@": resolve(__dirname, "src")
+      "@": resolve(__dirname, "src"),
+      "@api": resolve(__dirname, "src/api"),
+      "@hooks":resolve(__dirname, "src/hooks"),
+      "@views": resolve(__dirname, "src/hooks"),
+      "@styles": resolve(__dirname, "src/styles"),
     },
     extensions: [".js", ".ts", ".tsx", ".jsx", ".json", ".mjs"]
   },

@@ -1,11 +1,10 @@
-import Index from "@/views/index"
-import {
-    createBrowserRouter,
-  } from "react-router-dom"
+import {RouteObject, createBrowserRouter} from "react-router-dom"
 
-const router = createBrowserRouter([{
-    path:"/",
-    element: <Index/>
-}])
+// 配置路由
+const routes:RouteObject[] = [
+
+]
+
+const router = createBrowserRouter(routes)
 
 export default router

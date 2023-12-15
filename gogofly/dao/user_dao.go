@@ -68,7 +68,7 @@ func (m *UserDao) DeleteUserById(id uint) error {
 
 func (m *UserDao) GetUserByName(name string) (model.User, error) {
 	var user model.User
-	err := m.Orm.Model(&model.User{}).First(&user).Where("name=?", name).Error
+	err := m.Orm.Model(&model.User{}).Where("name=?", name).Find(&user).Error
 	return user, err
 }
 

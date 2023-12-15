@@ -35,6 +35,7 @@ func InitDB() (*gorm.DB, error) {
 
 	db.AutoMigrate(&model.User{})
 	db.AutoMigrate(&model.UserAddress{})
+	db.AutoMigrate(&model.UserTodo{})
 
 	return db, nil
 }

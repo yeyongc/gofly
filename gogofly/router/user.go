@@ -34,6 +34,13 @@ func InitUserRoutes() {
 				rgAuthUserAddress.DELETE("/delete", api.DeleteAddress)
 				rgAuthUserAddress.POST("/add", api.AddAddress)
 			}
+
+			rgAuthUserTodo := rgAuthUser.Group("/todo")
+			{
+				rgAuthUserTodo.POST("/add", api.AddTodo)
+				rgAuthUserTodo.DELETE("/delete", api.DeleteTodo)
+				rgAuthUserTodo.GET("/get", api.GetTodoList)
+			}
 		}
 	})
 }
